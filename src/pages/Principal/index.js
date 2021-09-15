@@ -11,13 +11,13 @@ import {
 //BtnPrincipal
 import { btnPrincipal } from "../../components/btnPrincipal";
 import ListCategoria from "../../components/listCategoria";
-import navigationConfigPrincipal from "../../components/navigationHeader";
+import navigationHeader from "../../components/navigationHeader";
 
 
 
 export default function Principal({navigation}){
     React.useLayoutEffect(()=>{
-        navigationConfigPrincipal({navigation})
+      navigationHeader({navigation})
     },[navigation])
 
 
@@ -25,7 +25,7 @@ export default function Principal({navigation}){
 
     return(
         
-        <ListCategoria/>
+        <ListCategoria navigation={navigation}/>
         
     )
 }

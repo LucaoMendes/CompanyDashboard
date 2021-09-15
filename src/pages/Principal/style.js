@@ -8,33 +8,74 @@ const styles = StyleSheet.create({
     },
 
 
-    menuIcon:{
+    
+
+    /* Header */
+    headerLeft:{
         marginLeft:10,
+    },
+    headerRight:{
+        alignItems:'center',
+        flexDirection:'column',
+        paddingRight:10,
+    },
+    menuIcon:{
+        fontSize:24,
         color:'white'
     },
-    headerText:{
-        
+    headerLogoutIcon:{
+        fontSize:10,
+        color:'white',
+        backgroundColor:colors.backgroundSecondary,
+        borderRadius:1000,
+        padding:3
+    },
+    headerRightText:{
+        marginRight:2,
+        color:'white',
+
     },
     header:{
-        backgroundColor: colors.backgroundPrimary
+        backgroundColor: colors.backgroundPrimary,
+        height:100
     },
+    avatar:{
+        backgroundColor:'white',
+    }, 
+    containerLogout:{
+        flexDirection:'row',
+        alignItems:'center'
+    } ,
+
+
+    /* Categoria Item List */
     categoriaItem:{
         padding: 20,
         paddingVertical: 15,
+        paddingHorizontal:15,
         alignItems:'center',
         justifyContent:"center",
-        paddingHorizontal:15,
-        minHeight: metrics.screenHeight * 0.25,
-        minWidth: metrics.screenWidth * 0.5,
+        
+        backgroundColor: colors.backgroundSecondary,
+        //width:123.33,
+        height:100,
+        margin: 2.5,
+        borderRadius:10,
+
+        flexGrow:1,
+        flexBasis:0,
+        
     },
     categoriaItemTitle:{
         color:"#fff",
-        fontSize: 32
+        fontSize: 15
     },
     categoriaItemImage:{
     },
     containerItemList:{
-        backgroundColor: colors.backgroundSecondary
+        flex:1,
+        flexDirection:'column',
+        
     },
     btnPrincipal:{
         

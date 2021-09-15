@@ -5,6 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 //Pages
 import Inicial from './src/pages/Inicial';
 import Principal from './src/pages/Principal';
+import Produtos from './src/pages/Produtos'
 
 const Stack = createStackNavigator()
 export default function App() {
@@ -30,7 +31,7 @@ export default function App() {
           
           <Stack.Screen
             name="Produtos"
-            component={Principal}/>
+            component={Produtos}/>
           
       </Stack.Navigator>
     </NavigationContainer>

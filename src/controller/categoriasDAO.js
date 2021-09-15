@@ -12,7 +12,7 @@ const categorias = [
         title: 'Roupas',
       },{
         id: 'bd7acbea-c1b1-4asdasaed5-3ad53abb28ba',
-        title: 'Acessorios',
+        title: 'Acessoriosxzcxzcxzczxc',
       },
       {
         id: '3ac68afc-c6sadsad-fbd91aa97f63',
@@ -32,6 +32,10 @@ const categorias = [
       {
         id: '58694a0f-3dsadsad571e29d72',
         title: 'Roupas',
+      },
+      {
+        id: '58694a0f-ss3dsadsad571e29d72',
+        title: 'RoupasDaRoua sadoksapodkakokap',
       },
 ]
 
