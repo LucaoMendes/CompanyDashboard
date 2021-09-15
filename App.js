@@ -5,13 +5,12 @@ import { createStackNavigator } from '@react-navigation/stack';
 //Pages
 import Inicial from './src/pages/Inicial';
 import Principal from './src/pages/Principal';
-import Produtos from './src/pages/Produtos'
-
+import Produtos from './src/pages/Produtos';
 const Stack = createStackNavigator()
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Inicial">
+      <Stack.Navigator initialRouteName="Principal">
 
 
         {/*Pagina de Login*/}

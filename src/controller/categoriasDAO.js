@@ -1,42 +1,28 @@
-const categorias = [
-    {
-        id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
-        title: 'Acessorios',
-      },
-      {
-        id: '3ac68afc-c605-4sadsadsad4f8-fbd91aa97f63',
-        title: 'Petiscos',
-      },
-      {
-        id: '58694a0f-3da1-47asdsadadbd96-145571e29d72',
-        title: 'Roupas',
-      },{
-        id: 'bd7acbea-c1b1-4asdasaed5-3ad53abb28ba',
-        title: 'Acessoriosxzcxzcxzczxc',
-      },
-      {
-        id: '3ac68afc-c6sadsad-fbd91aa97f63',
-        title: 'Petiscos',
-      },
-      {
-        id: '58694a0f-3ddasdsadsa-145571e29d72',
-        title: 'Roupas',
-      },{
-        id: 'bd7acbea-dsadsadad53abb28ba',
-        title: 'Acessorios',
-      },
-      {
-        id: '3ac68afc-c605asdsadsadsabd91aa97f63',
-        title: 'Petiscos',
-      },
-      {
-        id: '58694a0f-3dsadsad571e29d72',
-        title: 'Roupas',
-      },
-      {
-        id: '58694a0f-ss3dsadsad571e29d72',
-        title: 'RoupasDaRoua sadoksapodkakokap',
-      },
-]
+import React, { useState , useEffect} from "react";
+import database from '../config/firebaseConfig'
+const Categorias = () => {
+  const [ categorias , setCategorias] = useState([])
 
-export default categorias
+  function deleteCategoria(id){
+    database.collection("categorias").doc(id).delete()
+  }
+
+useEffect(()=>{
+  console.log("-------- CATEGORIAS DAO ---------")
+    database.collection("categorias").onSnapshot((query)=>{
+        const list = []
+        query.forEach((doc)=>{
+            list.push({...doc.data(), id: doc.id})
+        })
+        setCategorias(list)
+        console.log("DATA",list)
+        console.log("******** FIM  CATEGORIAS DAO ********")
+    })
+  
+},[])
+return categorias
+}
+
+
+
+export default Categorias

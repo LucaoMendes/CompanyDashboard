@@ -7,9 +7,6 @@ import {
 
 
 
-
-//BtnPrincipal
-import { btnPrincipal } from "../../components/btnPrincipal";
 import ListCategoria from "../../components/listCategoria";
 import navigationHeader from "../../components/navigationHeader";
 

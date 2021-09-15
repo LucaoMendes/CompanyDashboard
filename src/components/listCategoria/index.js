@@ -8,7 +8,7 @@ import {
 import styles from '../../pages/Principal/style'
 import { FontAwesome } from '@expo/vector-icons'
 //Categoria Component + DAO
-import categorias from "../../controller/categoriasDAO";
+import Categorias from "../../controller/categoriasDAO";
 import CategoriaListItem from "../../components/categoriasListItem";
 
 
@@ -21,7 +21,7 @@ export default function ListCategoria({navigation}) {
       return(
         <View style={styles.containerItemList}>
             <FlatList
-            data={categorias}
+            data={Categorias()}
             renderItem={renderItem}
             keyExtractor={item => item.id}
             numColumns={3} />
