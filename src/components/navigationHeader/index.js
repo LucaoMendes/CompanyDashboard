@@ -17,12 +17,12 @@ export default function navigationHeader({ navigation }) {
                 return(
                   <View style={styles.headerLeft}>
                     <TouchableOpacity onPress={()=> { navigation.navigate("Inicial") }}>
-                      <AntDesign style={styles.menuIcon} name="menuunfold" color="black" />
+                      <AntDesign style={styles.menuIcon} name="menuunfold" />
                     </TouchableOpacity>
                   </View>
                 )
               },
-              headerTintColor:colors.fontColorPrimary,
+              headerTintColor:colors.fontColorTopBar,
               headerStyle: styles.header,
               title:'Nogueira Rações',
               headerRight: ()=>{
@@ -35,7 +35,7 @@ export default function navigationHeader({ navigation }) {
                     <TouchableOpacity>
                     <View style={styles.containerLogout}>
                      <Text style={styles.headerRightText}>Lucas</Text>
-                     <AntDesign name="logout" style={styles.headerLogoutIcon} color="black" />
+                     <AntDesign name="logout" style={styles.headerLogoutIcon} />
                     </View>
                     </TouchableOpacity>
                   </View>

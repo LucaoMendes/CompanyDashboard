@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
         logoBox:{
             width:100,
             height:100,
-            backgroundColor: colors.backgroundPrimary ,
+            backgroundColor: colors.backgroundLogoBox ,
             borderRadius:100,
             alignSelf:'center',
             display:"flex",
@@ -60,15 +60,28 @@ const styles = StyleSheet.create({
             shadowRadius:1.41,
             elevation:2,
         },
+        logoIcon:{
+            shadowColor:"#000",
+            shadowOffset:{
+                width:0,
+                height:1,
+            },
+            shadowOpacity:0.2,
+            shadowRadius:1.41,
+            elevation:1,
+        }
+        ,
         logoLabel:{
-            fontSize: 25,
-            color:colors.fontColorPrimary,
-            fontWeight:"bold"
+            fontSize: 13,
+            color:colors.fontColorLogoBox,
+            fontWeight:"bold",
+            textAlign:'center',
         },
         loginTitleText:{
             fontSize:26,
             fontWeight:'bold',
             marginTop:20,
+            color:colors.fontColorAuthTitle,
         },
         
         loginButton:{

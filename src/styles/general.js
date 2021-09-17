@@ -18,6 +18,7 @@ const general = {
     inputLabel:{
         fontSize:18,
         marginBottom:6,
+        color: colors.fontColorAuthLabel,
     },
     input:{
         width:'100%',

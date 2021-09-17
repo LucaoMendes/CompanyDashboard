@@ -1,9 +1,6 @@
 import React from "react";
 import {
     View,
-    Text,
-    TouchableOpacity,
-    FlatList,
 } from "react-native"
 
 import navigationHeader from "../../components/navigationHeader";

@@ -24,10 +24,10 @@ export default function Inicial({navigation}) {
                 <View style={styles.centerizedView}>
                     <View style={styles.authBox}>
                         <View style={styles.logoBox}>
-                        <FontAwesome name="cogs"
+                        <FontAwesome name="sellsy" style={styles.logoIcon}
                             size={50}
                             color="#fff"/>
-                            <Text style={styles.logoLabel}>PDV</Text>
+                            <Text style={styles.logoLabel}>Company{"\n"}DashBoard</Text>
                         </View>
                         <Text style={styles.loginTitleText}>
                             Login
@@ -36,7 +36,7 @@ export default function Inicial({navigation}) {
                         <View style={styles.hr}></View>
 
                         <View style={styles.inputBox}>
-                            <Text style={styles.inputLabel}>Usuário</Text>
+                            <Text style={styles.inputLabel}>Usuário:</Text>
                             <TextInput 
                             style={styles.input}
                             keyboardType='email-address'
@@ -45,7 +45,7 @@ export default function Inicial({navigation}) {
                         </View>
 
                         <View style={styles.inputBox}>
-                            <Text style={styles.inputLabel}>Senha</Text>
+                            <Text style={styles.inputLabel}>Senha:</Text>
                             <TextInput 
                             style={styles.input}
                             secureTextEntry={true}
@@ -56,7 +56,7 @@ export default function Inicial({navigation}) {
                         <TouchableOpacity style={styles.loginButton} onPress={()=>{
                             navigation.navigate("Principal")
                         }}>
-                            <Text style={styles.loginButtonText}>Login</Text>
+                            <Text style={styles.loginButtonText}>Entrar</Text>
                         </TouchableOpacity>
 
                     </View>

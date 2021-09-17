@@ -6,10 +6,7 @@ const styles = StyleSheet.create({
         flex:1,
         height:'100%'
     },
-
-
-    
-
+//MOVER PARA GENERAL
     /* Header */
     headerLeft:{
         marginLeft:10,
@@ -21,30 +18,40 @@ const styles = StyleSheet.create({
     },
     menuIcon:{
         fontSize:24,
-        color:'white'
+        color:colors.colorMenuIcon,
     },
     headerLogoutIcon:{
         fontSize:10,
-        color:'white',
-        backgroundColor:colors.backgroundSecondary,
+        color:colors.colorLogoutIcon,
+        backgroundColor:colors.backgroundLogoutIcon,
         borderRadius:1000,
         padding:3
     },
     headerRightText:{
         marginRight:2,
-        color:'white',
+        color:colors.fontColorTopBar,
 
     },
     header:{
-        backgroundColor: colors.backgroundPrimary,
+        backgroundColor: colors.backgroundTopBar,
         height:100
     },
     avatar:{
-        backgroundColor:'white',
+        backgroundColor:colors.fontColorTopBar,
+        shadowColor:"#000",
+            shadowOffset:{
+                width:0,
+                height:2,
+            },
+            shadowOpacity:0.25,
+            shadowRadius: 3.84,
+            elevation:3,
     }, 
     containerLogout:{
         flexDirection:'row',
-        alignItems:'center'
+        alignItems:'center',
+        
+        
     } ,
 
 
@@ -56,7 +63,7 @@ const styles = StyleSheet.create({
         alignItems:'center',
         justifyContent:"center",
         
-        backgroundColor: colors.backgroundSecondary,
+        backgroundColor: colors.backgroundItem,
         //width:123.33,
         height:100,
         margin: 2.5,
@@ -64,13 +71,22 @@ const styles = StyleSheet.create({
 
         flexGrow:1,
         flexBasis:0,
+        shadowColor:"#000",
+            shadowOffset:{
+                width:0,
+                height:2,
+            },
+            shadowOpacity:0.25,
+            shadowRadius: 3.84,
+            elevation:3,
         
     },
     categoriaItemTitle:{
-        color:"#fff",
+        color: colors.fontColorItem,
         fontSize: 15
     },
     categoriaItemImage:{
+        color: colors.iconColorItem,
     },
     containerItemList:{
         flex:1,

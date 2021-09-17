@@ -8,8 +8,9 @@ import {
 
 
 import ListCategoria from "../../components/listCategoria";
+import NavigationBottom from "../../components/navigationBottom";
 import navigationHeader from "../../components/navigationHeader";
-
+import colors from "../../styles/colors"
 
 
 export default function Principal({navigation}){
@@ -21,8 +22,11 @@ export default function Principal({navigation}){
     
 
     return(
-        
+    <View style={{height:'100%',backgroundColor:colors.background}}>
         <ListCategoria navigation={navigation}/>
+        <NavigationBottom/>
+    </View>
+        
         
     )
 }

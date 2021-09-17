@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { 
     Text , 
     View , 
@@ -13,6 +13,8 @@ import CategoriaListItem from "../../components/categoriasListItem";
 
 
 export default function ListCategoria({navigation}) {
+    var categoItems = Categorias()
+    console.log('DATA INFO',categoItems)
     const renderItem = ({ item }) => {
         return (
             <CategoriaListItem item={item} navigation={navigation}/>
@@ -21,7 +23,7 @@ export default function ListCategoria({navigation}) {
       return(
         <View style={styles.containerItemList}>
             <FlatList
-            data={Categorias()}
+            data={categoItems}
             renderItem={renderItem}
             keyExtractor={item => item.id}
             numColumns={3} />
