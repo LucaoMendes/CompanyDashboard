@@ -1,5 +1,6 @@
 import React from 'react';
-import { NavigationContainer , useNavigation  } from '@react-navigation/native';
+import { View , Text } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer'
 //Pages
@@ -9,10 +10,9 @@ import Produtos from './src/pages/Produtos';
 import styles from './src/components/navigationHeader/style'
 import colors from './src/styles/colors'
 
-import NavigationBottom from './src/components/navigationBottom';
+import DrawerContent from './src/components/drawerContent';
 import { headerRight , headerLeft } from './src/components/navigationHeader';
 import {navi, navigationRef} from './src/config/RootNavigation'
-import {useRoute} from '@react-navigation/native';
 const Stack = createStackNavigator()
 const Drawer = createDrawerNavigator();
 
@@ -99,13 +99,13 @@ function produtosScreenStack({navigation}){
       </Stack.Navigator>
   )
 }
-
 export default class App extends React.Component  {
   render(){
   return (
     <NavigationContainer ref={navigationRef} >
       
       <Drawer.Navigator
+      drawerContent={(props) => <DrawerContent {...props}/>}
         screenOptions={{
           activeTintColor: '#e91e63',
           itemStyle:{ marginVertical:5 }
@@ -132,7 +132,6 @@ export default class App extends React.Component  {
               headerShown:true}}
           />
       </Drawer.Navigator>
-      <NavigationBottom route={this.props.activeItemKey}/>
     </NavigationContainer>
     )
             }

@@ -38,6 +38,7 @@ export default function NavigationBottom({navigation},route){
                     onPress={() => console.log('Pressed')}
                 />
             </View>
+            
         </Appbar>
 
     );

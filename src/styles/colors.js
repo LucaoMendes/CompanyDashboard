@@ -33,6 +33,9 @@ const colors = {
     fontColorItem: '#051923',
     iconColorItem: '#051923',
    
+
+    //Drawer
+    backgroundDrawerHeaderContainer: "#000",
     
     
     
