@@ -2,17 +2,26 @@ import React , { useEffect } from 'react'
 import { 
     Text, 
     View,
-    TextInput,
     Dimensions,
     TouchableOpacity,
     TouchableWithoutFeedback,
     Keyboard
 } from 'react-native'
 
+import {
+    TextInput,
+    HelperText
+} from 'react-native-paper'
 import { FontAwesome } from '@expo/vector-icons'
 import styles from './style'
 export default function Inicial({navigation}) {
-    
+    const [text, setText] = React.useState('');
+
+    const onChangeText = text => setText(text);
+
+    const hasErrors = () => {
+        return !text.includes('@') && !(text == '');
+    };
     return (
         <TouchableWithoutFeedback onPress={()=>{Keyboard.dismiss()}}>
             
@@ -36,25 +45,28 @@ export default function Inicial({navigation}) {
                         <View style={styles.hr}></View>
 
                         <View style={styles.inputBox}>
-                            <Text style={styles.inputLabel}>Usuário:</Text>
                             <TextInput 
-                            style={styles.input}
                             keyboardType='email-address'
                             textContentType='emailAddress'
+                            label="Usuário"
+                            value={text} onChangeText={onChangeText}
                              />
+                            <HelperText type="error" visible={hasErrors()}>
+                                Usuário Invalido
+                            </HelperText>
                         </View>
 
                         <View style={styles.inputBox}>
-                            <Text style={styles.inputLabel}>Senha:</Text>
                             <TextInput 
-                            style={styles.input}
                             secureTextEntry={true}
                             textContentType='password'
+                            label="Senha"
+                            right={<TextInput.Icon name="eye" />}
                              />
                         </View>
 
                         <TouchableOpacity style={styles.loginButton} onPress={()=>{
-                            navigation.navigate("Principal")
+                            navigation.navigate("principal")
                         }}>
                             <Text style={styles.loginButtonText}>Entrar</Text>
                         </TouchableOpacity>

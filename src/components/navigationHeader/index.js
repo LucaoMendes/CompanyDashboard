@@ -16,7 +16,7 @@ export default function navigationHeader({ navigation }) {
             headerLeft: ()=>{
                 return(
                   <View style={styles.headerLeft}>
-                    <TouchableOpacity onPress={()=> { navigation.navigate("Inicial") }}>
+                    <TouchableOpacity onPress={()=> navigation.openDrawer()}>
                       <AntDesign style={styles.menuIcon} name="menuunfold" />
                     </TouchableOpacity>
                   </View>

@@ -29,19 +29,26 @@ const styles = StyleSheet.create({
         color:colors.fontColorBottomBar,
         
     },
+    cobrarContainer:{
+        right:0,
+    },  
     cobrarIcon:{
         color:colors.colorCashIcon,
         fontSize: 23
     },
+    fabGroup:{
+        right:0,
+        bottom:20,
+
+    },
     fabPlusButton:{
         backgroundColor:colors.backgroundFabButton,
-        height:52,
-        width:52,
-        borderRadius: 1000,
+        height:54,
+        width:54,
+        borderRadius: 100,
         justifyContent:'center',
         alignItems:'center',
-        top:-25,
-        right:-4,
+        position:'relative',
         borderColor:colors.background,
         borderWidth:3,
 

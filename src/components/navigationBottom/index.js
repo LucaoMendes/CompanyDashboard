@@ -2,7 +2,7 @@ import { FontAwesome5 , AntDesign } from '@expo/vector-icons';
 import React, { Component } from 'react'
 import { Text, View , StyleSheet } from 'react-native'
 import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
-import { Appbar, Badge } from 'react-native-paper'
+import { Appbar, Badge , FAB } from 'react-native-paper'
 import styles from './style'
 export default function NavigationBottom(){
     
@@ -22,14 +22,21 @@ export default function NavigationBottom(){
             <View style={styles.totalTextContainer}>
                 <Text style={styles.totalText}>Total: R$ 40,00</Text>
             </View>
-        <Appbar.Action
+        <Appbar.Action 
+            style={styles.cobrarContainer}
             icon={()=>(
                 <FontAwesome5 name="cash-register" style={styles.cobrarIcon} />
             )} 
             onPress={() => console.log('Cobrar')}/>
-            <TouchableWithoutFeedback style={styles.fabPlusButton}>
-                <AntDesign name="plus" style={styles.fabPlusIcon} />
-            </TouchableWithoutFeedback>
+
+            <View style={styles.fabGroup}>
+            <FAB
+                    style={styles.fabPlusButton}
+                    small
+                    icon="plus"
+                    onPress={() => console.log('Pressed')}
+                />
+            </View>
         </Appbar>
 
     );

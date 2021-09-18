@@ -15,27 +15,31 @@ const colors = {
     backgroundLogoutIcon:'#fff',
     colorLogoutIcon:'#1F212B',
 
+    //BottomBar
+    backgroundBottomBar: "#051923",
+    fontColorBottomBar: '#fafafafa',
+    colorBadgeIcon:'#fff',
+    backgroundBadgeIcon:'#006494',
+    colorCartIcon:'#fafafafa',
+    colorCashIcon:'#fafafafa',
+    //FabButton
+    backgroundFabButton: '#006494',
+    //Fonte da FAB
+    fontColorFabButton: '#fff',
+
     //Itens
     background:'#fff',
     backgroundItem: '#fafafafa',
     fontColorItem: '#051923',
     iconColorItem: '#051923',
+   
     
     
-    //BottomBar
-    backgroundBottomBar: "#051923",
-    fontColorBottomBar: '#1F212B',
-    colorBadgeIcon:'#fff',
-    backgroundBadgeIcon:'#1F212B',
-    colorCartIcon:'#1F212B',
-    colorCashIcon:'#1F212B',
+    
     
     
 
-    //FabButton
-    backgroundFabButton: '#006494',
-    //Fonte da FAB
-    fontColorFabButton: '#fff',
+    
 
 
 

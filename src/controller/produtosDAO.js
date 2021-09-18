@@ -1,35 +1,38 @@
-const produtos = [
-    {
-        id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
-        title: 'Ração Pedigree',
-        value: 12.50,
-        costValue: 9.50,
-    },
-    {
-        id: 'bd7acbea-c1b1asds-46c2-aed5-3ad53abb28ba',
-        title: 'Ração Magnus',
-        value: 12.50,
-        costValue: 9.50,
-    },
-    {
-        id: 'bd7acbea-c1b1-46dsac2-aed5-3ad53abb28ba',
-        title: 'Ração Bomguy',
-        value: 12.50,
-        costValue: 9.50,
-    },
-    {
-        id: 'bd7acbea-c1b1-46c2-aedddd5-3ad53abb28ba',
-        title: 'Ração Premier',
-        value: 12.50,
-        costValue: 9.50,
-    },
-    {
-        id: 'bd7acbea-c1b1-46c2-acccd5-3ad53abb28ba',
-        title: 'Ração Pedigree',
-        value: 12.50,
-        costValue: 9.50,
-    },
+import React, { useState , useEffect} from "react";
+import database from '../config/firebaseConfig'
 
-]
+const Produtos = (categoria) => {
+  const [ produtos , setProdutos] = useState([])
+  const getProdutos = () =>{
+    console.log("-------- Produtos DAO ---------")
+      database.collection("produtos").onSnapshot((query)=>{
+          const list = []
+          query.forEach((doc)=>{
+              if(JSON.stringify(doc.data().idCateg) == categoria){
+                list.push({...doc.data(), id: doc.id})
+              }
+              
+          })
+          setProdutos(list)
+          console.log("DATA",list)
+          
+          console.log("******** FIM  PRODUTOS DAO ********")
+         
+      })
+  }
 
-export default produtos
+  function deleteCategoria(id){
+    database.collection("Produtos").doc(id).delete()
+  }
+
+useEffect(()=>{
+  getProdutos()
+},[])
+
+
+return produtos
+}
+
+
+
+export default Produtos
