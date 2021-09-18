@@ -1,11 +1,12 @@
-import { FontAwesome5 , AntDesign } from '@expo/vector-icons'; 
-import React, { Component } from 'react'
-import { Text, View , StyleSheet } from 'react-native'
-import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
+import { FontAwesome5  } from '@expo/vector-icons'; 
+import React from 'react'
+import { Text, View } from 'react-native'
 import { Appbar, Badge , FAB } from 'react-native-paper'
 import styles from './style'
-export default function NavigationBottom(){
-    
+import navigationRef from '../../config/RootNavigation'
+import {useRoute} from '@react-navigation/native';
+export default function NavigationBottom({navigation},route){
+    console.log("ROTA ATUAL",route)
     return (
         <Appbar style={styles.appBarContainer}>
         <Badge
