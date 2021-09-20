@@ -56,7 +56,7 @@ export default function DrawerContent({navigation}){
                 labelStyle={styles.drawerItemLabel}
                 label="Cadastros" 
                 icon={()=> <FontAwesome5 name="pencil-ruler" size={24} color="black" />}
-                onPress={()=>{ }}
+                onPress={()=>{navigation.navigate("Cadastros") }}
                     />
                      
                     <Hr/>
