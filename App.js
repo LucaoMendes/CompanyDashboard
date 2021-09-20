@@ -131,6 +131,10 @@ export default class App extends React.Component  {
               drawerLabel:'Categorias',
               headerShown:true}}
           />
+          <Drawer.Screen
+            name="produtos" 
+            component={produtosScreenStack} 
+          />
       </Drawer.Navigator>
     </NavigationContainer>
     )

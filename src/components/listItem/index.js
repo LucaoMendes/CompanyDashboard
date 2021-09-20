@@ -3,13 +3,14 @@ import { Text, View , TouchableOpacity } from 'react-native'
 import colors from '../../styles/colors'
 import styles from '../../pages/Principal/style'
 import { FontAwesome } from '@expo/vector-icons'
-import NumberFormat from 'react-number-format'
-export default function listItem({ item , navigation , listType , categoria } ) {
+export default function listItem({ item , navigation , listType} ) {
+    
+
     if(listType=="categorias"){
         const categoria = item.id
         return (
             <TouchableOpacity style={styles.categoriaItem} 
-            onPress={()=> { navigation.navigate("Produtos",{categoria})
+            onPress={()=> { navigation.navigate("Produtos",{categoria} )
             }} 
                 >
                 <View style={styles.categoriaItemImage}>
@@ -22,7 +23,7 @@ export default function listItem({ item , navigation , listType , categoria } ) 
             </TouchableOpacity>
         )
     }else if(listType=="produtos"){
-        const value = item.value
+        const value = item.value 
         console.log("CONST VALUE " + value)
         console.log("Value FORMATED " + value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) )
         return (
