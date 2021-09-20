@@ -1,9 +1,11 @@
 import React, { Component } from "react";
-import { View } from "react-native";
+import { View , Text } from "react-native";
 
 import styles from './style'
 import { AntDesign , Octicons , MaterialIcons , FontAwesome5 ,Entypo } from '@expo/vector-icons'; 
 import { DrawerContentScrollView , DrawerItem, DrawerItemList } from '@react-navigation/drawer'
+import { Avatar } from 'react-native-elements';
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 function Hr(){
     return(<View
@@ -14,7 +16,18 @@ export default function DrawerContent({navigation}){
         return(
             <DrawerContentScrollView >
                 <View style={styles.headerDrawerContainer}>
-
+                    <Avatar rounded size={120} source={require('../../assets/nogueiraRacoes.jpeg')} overlayContainerStyle={styles.avatarLoja}/>
+                    <Text style={styles.drawerCompanyName}>
+                        Nogueira Rações
+                    </Text>
+                    <Text style={styles.drawerAuthenticationLevel}>
+                    <AntDesign name="user" size={24} color="white" />   Administrador
+                    </Text>
+                    <TouchableOpacity style={styles.drawerConfigPerfil}>
+                        <Text style={styles.drawerConfigPerfilLabel}>
+                        <FontAwesome5 name="cogs" size={24} color="white" />   Configurações
+                        </Text>
+                    </TouchableOpacity>
                 </View>
                 <DrawerItem 
                 style={styles.drawerItem}
@@ -47,7 +60,7 @@ export default function DrawerContent({navigation}){
                     />
                      
                     <Hr/>
-                    
+
                     <DrawerItem 
                 style={styles.drawerItem}
                 labelStyle={styles.drawerItemLabel}

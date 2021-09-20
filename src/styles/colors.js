@@ -35,8 +35,8 @@ const colors = {
    
 
     //Drawer
-    backgroundDrawerHeaderContainer: "#000",
-    
+    backgroundDrawerHeaderContainer: "#051923",
+    fontColorPrimaryHeaderContainer: '#fafafa',
     
     
     
