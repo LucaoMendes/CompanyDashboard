@@ -7,6 +7,8 @@ import { createDrawerNavigator } from '@react-navigation/drawer'
 import Inicial from './src/pages/Inicial';
 import Principal from './src/pages/Principal';
 import Produtos from './src/pages/Produtos';
+import Cadastros from './src/pages/Cadastros';
+
 import styles from './src/components/navigationHeader/style'
 import colors from './src/styles/colors'
 
@@ -34,19 +36,18 @@ function inicialScreenStack({navigation}){
           <Stack.Screen
             name="Principal"
             component={Principal}/>
-          
           <Stack.Screen
             name="Produtos"
             component={Produtos}/>
-          
+          <Stack.Screen
+            name="Cadastros"
+            component={Cadastros}/>
       </Stack.Navigator>
   )
 }
 function principalScreenStack({navigation}){
   return(
     <Stack.Navigator initialRouteName="Principal">
-
-        
         <Stack.Screen 
           name="Inicial" 
           component={Inicial} 
@@ -59,21 +60,13 @@ function principalScreenStack({navigation}){
 
           <Stack.Screen
             name="Principal"
-            component={Principal}
-            options={
-              {
-                headerShown: false
-              }
-            }/>
-          
+            component={Principal}/>
           <Stack.Screen
             name="Produtos"
-            component={Produtos}
-            options={
-              {
-                headerShown: false
-              }
-            }/>
+            component={Produtos}/>
+            <Stack.Screen
+            name="Cadastros"
+            component={Cadastros}/>
           
       </Stack.Navigator>
   )
@@ -96,8 +89,36 @@ function produtosScreenStack({navigation}){
           <Stack.Screen
             name="Produtos"
             component={Produtos}/>
+            <Stack.Screen
+            name="Cadastros"
+            component={Cadastros}/>
       </Stack.Navigator>
   )
+}
+function cadastrosScreenStack({navigation}){
+return(
+  <Stack.Navigator initialRouteName="Cadastros">
+    <Stack.Screen 
+      name="Inicial" 
+      component={Inicial} 
+      options={
+        {
+          headerShown: false
+        }
+      }
+      />
+
+      <Stack.Screen
+        name="Principal"
+        component={Principal}/>
+      <Stack.Screen
+        name="Produtos"
+        component={Produtos}/>
+        <Stack.Screen
+        name="Cadastros"
+        component={Cadastros}/>
+    </Stack.Navigator>
+)
 }
 export default class App extends React.Component  {
   render(){
@@ -134,6 +155,10 @@ export default class App extends React.Component  {
           <Drawer.Screen
             name="produtos" 
             component={produtosScreenStack} 
+          />
+          <Drawer.Screen
+            name="cadastros" 
+            component={cadastrosScreenStack} 
           />
       </Drawer.Navigator>
     </NavigationContainer>
