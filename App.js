@@ -50,23 +50,21 @@ function principalScreenStack({navigation}){
     <Stack.Navigator initialRouteName="Principal">
         <Stack.Screen 
           name="Inicial" 
-          component={Inicial} 
-          options={
-            {
-              headerShown: false
-            }
-          }
+          component={Inicial}
+          options={{headerShown: false}}
           />
-
           <Stack.Screen
             name="Principal"
-            component={Principal}/>
+            component={Principal}
+            options={{headerShown: false}}/>
           <Stack.Screen
             name="Produtos"
-            component={Produtos}/>
+            component={Produtos}
+            options={{headerShown: false}}/>
             <Stack.Screen
             name="Cadastros"
-            component={Cadastros}/>
+            component={Cadastros}
+            options={{headerShown: false}}/>
           
       </Stack.Navigator>
   )
@@ -77,21 +75,20 @@ function produtosScreenStack({navigation}){
         <Stack.Screen 
           name="Inicial" 
           component={Inicial} 
-          options={
-            {
-              headerShown: false
-            }
-          }
+          options={{headerShown: false}}
           />
           <Stack.Screen
             name="Principal"
-            component={Principal}/>
+            component={Principal}
+            options={{headerShown: false}}/>
           <Stack.Screen
             name="Produtos"
-            component={Produtos}/>
+            component={Produtos}
+            options={{headerShown: false}}/>
             <Stack.Screen
             name="Cadastros"
-            component={Cadastros}/>
+            component={Cadastros}
+            options={{headerShown: false}}/>
       </Stack.Navigator>
   )
 }
@@ -101,22 +98,22 @@ return(
     <Stack.Screen 
       name="Inicial" 
       component={Inicial} 
-      options={
-        {
-          headerShown: false
-        }
+      options={{headerShown: false}
       }
       />
 
       <Stack.Screen
         name="Principal"
-        component={Principal}/>
+        component={Principal}
+        options={{headerShown: false}}/>
       <Stack.Screen
         name="Produtos"
-        component={Produtos}/>
+        component={Produtos}
+        options={{headerShown: false}}/>
         <Stack.Screen
         name="Cadastros"
-        component={Cadastros}/>
+        component={Cadastros}
+        options={{headerShown: false}}/>
     </Stack.Navigator>
 )
 }
