@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
     btnOption:{
         alignItems:'center',
         justifyContent:'center',
-        backgroundColor:colors.backgroundSecondary,
+        backgroundColor:colors.backgroundOptionBtn,
         margin:2,
         height:50,
         
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
         color:colors.fontColorOptionBtn
     },
     columnBtn:{
-        width:"50%",
+        width:"50%"
     }
 
 })

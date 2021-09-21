@@ -12,28 +12,33 @@ export default function Cadastros({navigation}){
     return(
         <View style={styles.container}>
             <View style={styles.columnBtn}>
-            <TouchableOpacity style={styles.btnOption}>
+            <TouchableOpacity style={styles.btnOption} onPress={()=>{}}>
                 <Text style={styles.btnLabel}>Categorias</Text>
             </TouchableOpacity>
             </View>
             <View style={styles.columnBtn}>
             <TouchableOpacity style={styles.btnOption}>
-                <Text style={styles.btnLabel}>Categorias</Text>
+                <Text style={styles.btnLabel}>Produtos</Text>
             </TouchableOpacity>
             </View>
             <View style={styles.columnBtn}>
             <TouchableOpacity style={styles.btnOption}>
-                <Text style={styles.btnLabel}>Categorias</Text>
+                <Text style={styles.btnLabel}>Vendedores</Text>
             </TouchableOpacity>
             </View>
             <View style={styles.columnBtn}>
             <TouchableOpacity style={styles.btnOption}>
-                <Text style={styles.btnLabel}>Categorias</Text>
+                <Text style={styles.btnLabel}>Fornecedores</Text>
             </TouchableOpacity>
             </View>
             <View style={styles.columnBtn}>
             <TouchableOpacity style={styles.btnOption}>
-                <Text style={styles.btnLabel}>Categorias</Text>
+                <Text style={styles.btnLabel}>Clientes</Text>
+            </TouchableOpacity>
+            </View>
+            <View style={styles.columnBtn}>
+            <TouchableOpacity style={styles.btnOption}>
+                <Text style={styles.btnLabel}>Formas de Pagamento</Text>
             </TouchableOpacity>
             </View>
         </View>

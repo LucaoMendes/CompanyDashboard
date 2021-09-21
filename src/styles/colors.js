@@ -40,8 +40,8 @@ const colors = {
     
     //Page Cadastros
     //Botões
-    backgroundOptionBtn:'#051923',
-    fontColorOptionBtn:'#fafafa',
+    backgroundOptionBtn:'#fafafafa',
+    fontColorOptionBtn:'#051923',
     
     
 
