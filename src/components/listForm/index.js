@@ -5,7 +5,7 @@ import {
     TouchableOpacity ,
     FlatList, 
 } from 'react-native'
-import styles from '../../pages/Principal/style'
+import styles from '../../pages/Categorias/style'
 import { FontAwesome } from '@expo/vector-icons'
 //Categoria Component + DAO
 import Categorias from "../../controller/categoriasDAO";

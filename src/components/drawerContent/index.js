@@ -34,7 +34,7 @@ export default function DrawerContent({navigation}){
                 labelStyle={styles.drawerItemLabel}
                 label="Inicio" 
                 icon={()=> <AntDesign name="home" size={24} color="black" />}
-                onPress={()=>{navigation.navigate("Principal") }}
+                onPress={()=>{navigation.navigate("ItensStack") }}
                     />
                     <Hr/>
                     <DrawerItem 
@@ -56,7 +56,7 @@ export default function DrawerContent({navigation}){
                 labelStyle={styles.drawerItemLabel}
                 label="Cadastros" 
                 icon={()=> <FontAwesome5 name="pencil-ruler" size={24} color="black" />}
-                onPress={()=>{navigation.navigate("Cadastros") }}
+                onPress={()=>{navigation.navigate("CadastrosStack") }}
                     />
                      
                     <Hr/>

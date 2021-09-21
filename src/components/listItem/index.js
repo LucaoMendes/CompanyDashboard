@@ -1,7 +1,7 @@
 import React from 'react'
 import { Text, View , TouchableOpacity } from 'react-native'
 import colors from '../../styles/colors'
-import styles from '../../pages/Principal/style'
+import styles from '../../pages/Categorias/style'
 import { FontAwesome } from '@expo/vector-icons'
 export default function listItem({ item , navigation , listType} ) {
     

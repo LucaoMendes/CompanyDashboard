@@ -14,7 +14,7 @@ import {
 } from 'react-native-paper'
 import { FontAwesome } from '@expo/vector-icons'
 import styles from './style'
-export default function Inicial({navigation}) {
+export default function Login({navigation}) {
     const [text, setText] = React.useState('');
 
     const onChangeText = text => setText(text);
@@ -66,7 +66,7 @@ export default function Inicial({navigation}) {
                         </View>
 
                         <TouchableOpacity style={styles.loginButton} onPress={()=>{
-                            navigation.navigate("principal")
+                            navigation.navigate("PrincipalDrawer")
                         }}>
                             <Text style={styles.loginButtonText}>Entrar</Text>
                         </TouchableOpacity>

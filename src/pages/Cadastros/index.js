@@ -5,11 +5,6 @@ import styles from "./style";
 import FabGroupCad from "../../components/fabGroupCad";
 export default function Cadastros({navigation}){
     
-    React.useEffect(()=>{
-        navigation.setOptions({
-            title:'Cadastros'
-        })
-    })
     return(
         <View style={styles.container}>
             <View style={styles.columnBtn}>
