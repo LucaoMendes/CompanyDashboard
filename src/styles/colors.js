@@ -38,7 +38,10 @@ const colors = {
     backgroundDrawerHeaderContainer: "#051923",
     fontColorPrimaryHeaderContainer: '#fafafa',
     
-    
+    //Page Cadastros
+    //Botões
+    backgroundOptionBtn:'#051923',
+    fontColorOptionBtn:'#fafafa',
     
     
 
