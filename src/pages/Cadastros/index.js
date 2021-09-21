@@ -2,8 +2,9 @@ import React from "react";
 import { Text, View } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import styles from "./style";
-
+import FabGroupCad from "../../components/fabGroupCad";
 export default function Cadastros({navigation}){
+    
     React.useEffect(()=>{
         navigation.setOptions({
             title:'Cadastros'
@@ -41,6 +42,8 @@ export default function Cadastros({navigation}){
                 <Text style={styles.btnLabel}>Formas de Pagamento</Text>
             </TouchableOpacity>
             </View>
+
+            <FabGroupCad/>
         </View>
     )
 
