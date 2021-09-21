@@ -18,104 +18,56 @@ import {navi, navigationRef} from './src/config/RootNavigation'
 const Stack = createStackNavigator()
 const Drawer = createDrawerNavigator();
 
-function inicialScreenStack({navigation}){
+function returnStackNavigation(initialRouteName){
   return(
-    <Stack.Navigator initialRouteName="Inicial">
+    <Stack.Navigator initialRouteName={initialRouteName}>
 
         
         <Stack.Screen 
           name="Inicial" 
           component={Inicial} 
-          options={
-            {
-              headerShown: false
-            }
-          }
+          options={{headerShown: false}}
           />
 
           <Stack.Screen
             name="Principal"
-            component={Principal}/>
+            component={Principal}
+            options={{headerShown: false}}
+          />
+
           <Stack.Screen
             name="Produtos"
-            component={Produtos}/>
+            component={Produtos}
+            options={{headerShown: false}}
+          />
+
           <Stack.Screen
             name="Cadastros"
-            component={Cadastros}/>
+            component={Cadastros}
+            options={{headerShown: false}}
+          />
       </Stack.Navigator>
+  )
+}
+function inicialScreenStack({navigation}){
+  return(
+    returnStackNavigation("Inicial")
   )
 }
 function principalScreenStack({navigation}){
   return(
-    <Stack.Navigator initialRouteName="Principal">
-        <Stack.Screen 
-          name="Inicial" 
-          component={Inicial}
-          options={{headerShown: false}}
-          />
-          <Stack.Screen
-            name="Principal"
-            component={Principal}
-            options={{headerShown: false}}/>
-          <Stack.Screen
-            name="Produtos"
-            component={Produtos}
-            options={{headerShown: false}}/>
-            <Stack.Screen
-            name="Cadastros"
-            component={Cadastros}
-            options={{headerShown: false}}/>
-          
-      </Stack.Navigator>
+    returnStackNavigation("Principal")
   )
 }
 function produtosScreenStack({navigation}){
   return(
-    <Stack.Navigator initialRouteName="Produtos">
-        <Stack.Screen 
-          name="Inicial" 
-          component={Inicial} 
-          options={{headerShown: false}}
-          />
-          <Stack.Screen
-            name="Principal"
-            component={Principal}
-            options={{headerShown: false}}/>
-          <Stack.Screen
-            name="Produtos"
-            component={Produtos}
-            options={{headerShown: false}}/>
-            <Stack.Screen
-            name="Cadastros"
-            component={Cadastros}
-            options={{headerShown: false}}/>
-      </Stack.Navigator>
+    returnStackNavigation("Produtos")
   )
 }
 function cadastrosScreenStack({navigation}){
-return(
-  <Stack.Navigator initialRouteName="Cadastros">
-    <Stack.Screen 
-      name="Inicial" 
-      component={Inicial} 
-      options={{headerShown: false}
-      }
-      />
-
-      <Stack.Screen
-        name="Principal"
-        component={Principal}
-        options={{headerShown: false}}/>
-      <Stack.Screen
-        name="Produtos"
-        component={Produtos}
-        options={{headerShown: false}}/>
-        <Stack.Screen
-        name="Cadastros"
-        component={Cadastros}
-        options={{headerShown: false}}/>
-    </Stack.Navigator>
-)
+  return(
+    returnStackNavigation("Cadastros")
+  )
 }
 export default class App extends React.Component  {
   render(){
@@ -134,8 +86,9 @@ export default class App extends React.Component  {
             options={{ 
               drawerLabel:'Login',
               headerShown:false
-          }}
+            }}
           />
+
           <Drawer.Screen
             name="principal" 
             component={principalScreenStack} 
