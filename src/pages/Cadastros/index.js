@@ -1,14 +1,16 @@
 import React from "react";
 import { Text, View } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
+import { Modal, Portal, Button, Provider } from 'react-native-paper';
 import styles from "./style";
 import FabGroupCad from "../../components/fabGroupCad";
 export default function Cadastros({navigation}){
     
     return(
         <View style={styles.container}>
+            
             <View style={styles.columnBtn}>
-            <TouchableOpacity style={styles.btnOption} onPress={()=>{}}>
+            <TouchableOpacity style={styles.btnOption}>
                 <Text style={styles.btnLabel}>Categorias</Text>
             </TouchableOpacity>
             </View>
@@ -39,6 +41,7 @@ export default function Cadastros({navigation}){
             </View>
 
             <FabGroupCad/>
+            
         </View>
     )
 

@@ -8,9 +8,9 @@ import {
 import styles from '../../pages/Categorias/style'
 import { FontAwesome } from '@expo/vector-icons'
 //Categoria Component + DAO
-import Categorias from "../../controller/categoriasDAO";
+import Categorias, { getNextId } from "../../controller/categoriasDAO";
 import ListItem from "../listItem";
-import Produtos from '../../controller/produtosDAO';
+import Produtos  from '../../controller/produtosDAO';
 
 
 export default function ListForm({ navigation , listType , categoria}) {

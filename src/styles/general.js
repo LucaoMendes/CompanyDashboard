@@ -32,6 +32,31 @@ const general = {
         width:"100%",
         top:'30%',
     },
+
+
+    //Modals GENERAL STYLE
+
+
+    modalContainer:{
+        borderRadius:10,
+        marginHorizontal:40,
+        padding:10,
+        backgroundColor:colors.backgroundAuthBox,
+        top:-75,
+    },
+    modalTitle:{
+        fontSize:25,
+        color:colors.fontColorAuthLabel,
+        textAlign:'center'
+    },
+    modalInputBox:{
+        margin:5,
+    },
+    modalButton:{
+        marginHorizontal:5,
+        marginTop:5,
+        backgroundColor:colors.backgroundButton
+    }
 };
 
 export default general;

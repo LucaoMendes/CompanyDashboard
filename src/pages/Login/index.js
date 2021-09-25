@@ -36,7 +36,7 @@ export default function Login({navigation}) {
                         <FontAwesome name="sellsy" style={styles.logoIcon}
                             size={50}
                             color="#fff"/>
-                            <Text style={styles.logoLabel}>Company{"\n"}DashBoard</Text>
+                            <Text style={styles.logoLabel}>Company{"\n"}Dashboard</Text>
                         </View>
                         <Text style={styles.loginTitleText}>
                             Login
