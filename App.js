@@ -26,30 +26,3 @@ export default class App extends React.Component  {
     )
   }
 }
-
-/*
-    <NavigationContainer>
-       
-      <Stack.Navigator initialRouteName="Inicial">
-
-        
-        <Stack.Screen 
-          name="Inicial" 
-          component={Inicial} 
-          options={
-            {
-              headerShown: false
-            }
-          }
-          />
-
-          <Stack.Screen
-            name="Principal"
-            component={Principal}/>
-          
-          <Stack.Screen
-            name="Produtos"
-            component={Produtos}/>
-          
-      </Stack.Navigator>
-    </NavigationContainer> */
