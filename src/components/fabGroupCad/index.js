@@ -1,7 +1,8 @@
 import React from "react";
-import { FAB, Portal, Provider } from 'react-native-paper';
+import {  Modal, Text ,FAB, Portal, Provider } from 'react-native-paper';
 import { MaterialIcons , AntDesign } from '@expo/vector-icons';
-
+import CadCategoriaModal from "../cadCategoriaModal";
+import general from "../../styles/general";
 
 
 
@@ -12,7 +13,12 @@ export default function FabGroupCad(){
     const onStateChange = ({ open }) => setState({ open });
 
     const { open } = state;
-    return(
+
+
+    const [visible,setVisible] = React.useState(false)
+    const showModal = ()=> setVisible(true)
+    const hideModal = ()=> setVisible(false)
+    return(<>
         <Provider>
             <Portal>
                 <FAB.Group
@@ -47,7 +53,7 @@ export default function FabGroupCad(){
                     {
                     icon: ()=><MaterialIcons name="category" size={24} color='grey'/>,
                     label: 'Categorias',
-                    onPress: () => console.log('Pressed notifications'),
+                    onPress:showModal,
                     },
                 ]}
                 onStateChange={onStateChange}
@@ -59,5 +65,7 @@ export default function FabGroupCad(){
                 />
             </Portal>
         </Provider>
+        <CadCategoriaModal closeDisplay={()=> hideModal} visible={visible}/>
+        </>
     )
 }
